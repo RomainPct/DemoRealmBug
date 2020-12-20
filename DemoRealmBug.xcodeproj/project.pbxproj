@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,11 @@
 		DE3A3E27258FC881002B3695 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3A3E25258FC881002B3695 /* Main.storyboard */; };
 		DE3A3E29258FC882002B3695 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE3A3E28258FC882002B3695 /* Assets.xcassets */; };
 		DE3A3E2C258FC882002B3695 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE3A3E2A258FC882002B3695 /* LaunchScreen.storyboard */; };
+		DE3A3E36258FC904002B3695 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = DE3A3E35258FC904002B3695 /* Realm */; };
+		DE3A3E38258FC904002B3695 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DE3A3E37258FC904002B3695 /* RealmSwift */; };
+		DE3A3E3D258FCA24002B3695 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A3E3C258FCA24002B3695 /* Card.swift */; };
+		DE3A3E41258FCA78002B3695 /* Vault.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A3E40258FCA78002B3695 /* Vault.swift */; };
+		DE3A3E45258FCC2C002B3695 /* Data_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3A3E44258FCC2C002B3695 /* Data_extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		DE3A3E28258FC882002B3695 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE3A3E2B258FC882002B3695 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE3A3E2D258FC882002B3695 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DE3A3E39258FC90A002B3695 /* DemoRealmBug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DemoRealmBug.entitlements; sourceTree = "<group>"; };
+		DE3A3E3C258FCA24002B3695 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DE3A3E40258FCA78002B3695 /* Vault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vault.swift; sourceTree = "<group>"; };
+		DE3A3E44258FCC2C002B3695 /* Data_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data_extension.swift; sourceTree = "<group>"; };
+		DE3A3E47258FD7F8002B3695 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE3A3E38258FC904002B3695 /* RealmSwift in Frameworks */,
+				DE3A3E36258FC904002B3695 /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +52,7 @@
 		DE3A3E13258FC881002B3695 = {
 			isa = PBXGroup;
 			children = (
+				DE3A3E47258FD7F8002B3695 /* README.md */,
 				DE3A3E1E258FC881002B3695 /* DemoRealmBug */,
 				DE3A3E1D258FC881002B3695 /* Products */,
 			);
@@ -56,6 +69,7 @@
 		DE3A3E1E258FC881002B3695 /* DemoRealmBug */ = {
 			isa = PBXGroup;
 			children = (
+				DE3A3E39258FC90A002B3695 /* DemoRealmBug.entitlements */,
 				DE3A3E1F258FC881002B3695 /* AppDelegate.swift */,
 				DE3A3E21258FC881002B3695 /* SceneDelegate.swift */,
 				DE3A3E23258FC881002B3695 /* ViewController.swift */,
@@ -63,8 +77,19 @@
 				DE3A3E28258FC882002B3695 /* Assets.xcassets */,
 				DE3A3E2A258FC882002B3695 /* LaunchScreen.storyboard */,
 				DE3A3E2D258FC882002B3695 /* Info.plist */,
+				DE3A3E3F258FCA6A002B3695 /* Realm */,
 			);
 			path = DemoRealmBug;
+			sourceTree = "<group>";
+		};
+		DE3A3E3F258FCA6A002B3695 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				DE3A3E3C258FCA24002B3695 /* Card.swift */,
+				DE3A3E40258FCA78002B3695 /* Vault.swift */,
+				DE3A3E44258FCC2C002B3695 /* Data_extension.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +108,10 @@
 			dependencies = (
 			);
 			name = DemoRealmBug;
+			packageProductDependencies = (
+				DE3A3E35258FC904002B3695 /* Realm */,
+				DE3A3E37258FC904002B3695 /* RealmSwift */,
+			);
 			productName = DemoRealmBug;
 			productReference = DE3A3E1C258FC881002B3695 /* DemoRealmBug.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +139,9 @@
 				Base,
 			);
 			mainGroup = DE3A3E13258FC881002B3695;
+			packageReferences = (
+				DE3A3E34258FC904002B3695 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = DE3A3E1D258FC881002B3695 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +172,9 @@
 				DE3A3E24258FC881002B3695 /* ViewController.swift in Sources */,
 				DE3A3E20258FC881002B3695 /* AppDelegate.swift in Sources */,
 				DE3A3E22258FC881002B3695 /* SceneDelegate.swift in Sources */,
+				DE3A3E45258FCC2C002B3695 /* Data_extension.swift in Sources */,
+				DE3A3E3D258FCA24002B3695 /* Card.swift in Sources */,
+				DE3A3E41258FCA78002B3695 /* Vault.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,15 +321,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DemoRealmBug/DemoRealmBug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AU9T7HA2AB;
 				INFOPLIST_FILE = DemoRealmBug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.romainpenchenat.DemoRealmBug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -305,15 +344,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DemoRealmBug/DemoRealmBug.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AU9T7HA2AB;
 				INFOPLIST_FILE = DemoRealmBug/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.romainpenchenat.DemoRealmBug;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -341,6 +384,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DE3A3E34258FC904002B3695 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DE3A3E35258FC904002B3695 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE3A3E34258FC904002B3695 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		DE3A3E37258FC904002B3695 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DE3A3E34258FC904002B3695 /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DE3A3E14258FC881002B3695 /* Project object */;
 }
